@@ -3,13 +3,14 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Portail trajets - Concert du ZEvent 2022</title>
+  <title>Portail trajets & hébergements - Concert du ZEVENT 2024</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta property="og:title" content="Portail des trajets pour le concert du ZEvent 2022">
+  <meta property="og:title" content="Concert du ZEVENT 2024 - Portail trajets & hébergements">
+  <meta property="og:description" content="Crée/cherche un covoiturage, et propose/rejoins des trajets en train/car et des hébergements !">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://gdoc-tmcup.github.io/covoit-zevent/">
-  <meta property="og:image" content="https://gdoc-tmcup.github.io/covoit-zevent/img/zevent-2022-head.jpg">
+  <meta property="og:url" content="https://covoit-zevent.fr/">
+  <meta property="og:image" content="https://covoit-zevent.fr/img/zevent-2024-logo.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,7 +25,11 @@
     }
 
     body {
-      background-color: #36393f;
+      background-color: #131313;
+    }
+
+    h1 {
+      margin: 0.5em auto;
     }
 
     main {
@@ -42,22 +47,27 @@
       justify-content: space-between;
       align-items: center;
       width: 100%;
-    }
 
-    #links a {
-      width: 49%;
+      & a {
+        width: 49%;
+      }
     }
 
     .link {
-      border: 2px solid white;
+      border: 4px solid #11b911;
       text-decoration: none;
-      background-color: #36393f;
+      background-color: #131313;
       transition: 0.4s;
       padding: 0 5px;
-    }
 
-    .link:hover {
-      background-color: rgba(62, 249, 65, 0.5);
+      &:hover {
+        background-color: #11b911;
+        border-color: #11b911;
+
+        & * {
+          color: black;
+        }
+      }
     }
 
     h2 {
@@ -81,10 +91,10 @@
       width: 55%;
       margin: 10px auto 0;
       display: block;
-    }
 
-    #discord br {
-      display: none;
+      & br {
+        display: none;
+      }
     }
 
     #discord .link-title {
@@ -94,6 +104,26 @@
     footer {
       font-size: 0.8rem;
       margin-top: 5px;
+    }
+
+    @media screen and (max-width: 600px) {
+      #image-desktop {
+        display: none;
+      }
+
+      #image-mobile {
+        display: block;
+      }
+    }
+
+    @media screen and (min-width: 600px) {
+      #image-desktop {
+        display: block;
+      }
+
+      #image-mobile {
+        display: none;
+      }
     }
 
     @media screen and (max-width: 750px) {
@@ -128,19 +158,20 @@
 </head>
 
 <body>
-  <h1>Portail d'organisation des trajets / hébergements pour le concert du ZEvent 2022</h1>
+  <h1>Portail d'organisation des trajets / hébergements pour le concert du ZEVENT 2024</h1>
 
   <main>
-    <img src="img/zevent-2022-head.jpg" alt="Résumé des informations à savoir pour le concert du ZEvent 2022, le 8 septembre 2022 au Zénith Sud de Montpellier" width="100%" />
+    <img src="img/visuel-zevent-2024.jpg" alt="Visuel du ZEVENT 2024 avec les informations sur le concert" width="100%" id="image-desktop" loading="lazy" />
+    <img src="img/visuel-zevent-2024-mobile.jpg" alt="Bannière du ZEVENT 2024" width="100%" id="image-mobile" loading="lazy" />
 
     <div id="links">
-      <a href="https://docs.google.com/spreadsheets/d/1eBxIvkbZdbnDUkd4Ia3YWelSECkrKu-07dBju_9dW6U/edit" id="gdoc" class="link">
-        <h2>Vous souhaitez proposer/demander un trajet<br>ou vous êtes intéressé(e) par un trajet</h2>
+      <a href="https://docs.google.com/spreadsheets/d/1yLKMvUCdH65zMnIFvIQkJ7HR6L8kRHvoqpdFD9pSIpM/edit" id="gdoc" class="link">
+        <h2>Tu souhaites proposer/demander un trajet<br>ou un trajet proposé t'intéresse</h2>
         <p class="link-title">Accéder au GDoc</p>
         <p class="link-subtitle">(demande d'accès nécessaire)</p>
       </a>
-      <a href="https://www.google.fr/maps/d/viewer?mid=1cAOiA-nrIVKFwXxIlrP2Kzj40_x_USE" id="map" class="link">
-        <h2>Vous souhaitez visualiser un résumé<br>des trajets proposés/demandés</h2>
+      <a href="https://www.google.fr/maps/d/viewer?mid=1ZIpZUdr97Qk8h6SwoZUXFlRZuKF2jb8" id="map" class="link">
+        <h2>Tu souhaites visualiser un résumé<br>des trajets proposés/demandés</h2>
         <p class="link-title">Accéder à la carte Google Maps</p>
         <p class="link-subtitle">(public - accès en lecture uniquement)</p>
       </a>
@@ -152,7 +183,7 @@
     </a>
   </main>
 
-  <footer>Ces outils ont été créés par un viewer et ne sont affiliés ni à ZT Production, ni à Twitch, ni aux artistes, ni aux associations bénéficiaires.</footer>
+  <footer>Ces outils ont été créés par un viewer et ne sont affiliés ni à ZT Production, ni à ZQSD Productions, ni aux artistes, ni aux associations bénéficiaires.</footer>
 </body>
 
 </html>
